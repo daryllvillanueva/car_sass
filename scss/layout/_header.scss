@@ -1,0 +1,46 @@
+@use '../abstract' as *;
+
+.header {
+    .header_wrapper {
+        display: grid;
+        grid-template-columns: 1.65fr 1fr;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+        
+            li {
+                position: relative;
+                a {
+                    font-size: clamp(1rem, 5vw, 1.7rem);
+                }
+                strong {
+                    background: $clr-primary;
+                    display: inline-block;
+                    height: 9px;
+                    width: 140%;
+                    right: -1rem;
+                    top: 9.5rem;
+                    opacity: 1;
+                    position: absolute;
+                    z-index: 1;
+                }
+    
+            }
+
+            @include mediaQuery {
+                ul {
+                    flex-direction: column;
+                    gap: 1.7rem;
+                }
+
+                li strong {
+                    display: none;
+                }
+                
+            } 
+        }
+    }
+}

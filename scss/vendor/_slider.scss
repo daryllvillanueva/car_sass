@@ -1,0 +1,30 @@
+@use '../abstract' as *;
+
+.tns-outer {
+    position: relative;
+    .tns-nav {
+        @include mediaQuery {
+            bottom: 7rem;
+        }
+        position: absolute;
+        left: 66%;
+        bottom: 16rem;
+        z-index: 10;
+        button {
+            margin: 0 .4rem;
+            width: 13px;
+            height: 13px;
+            border-radius: 100%;
+            border: none;
+        }
+        &-active {
+            background-color: $clr-dark;
+        }
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+@use '../abstract' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Ubuntu Condensed", arial, sans-serif;
+    font-size: 1.6rem;
+    background-color: $clr-dark;
+}
+
+
+a {
+    color: $clr-light;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,h2,h5,h6 {
+    font-family: "Ubuntu Condensed", arial, sans-serif;
+    text-wrap: balance;
+}
+
+h3,h4 {
+    font-family: "Ubuntu Condensed", arial, sans-serif;
+    text-wrap: balance;
+}
+
+
+h1 {
+    font-size: clamp(2.5rem, 6vw , 4rem);
+    // margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 6vw , 3rem);
+    // margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: clamp(2rem, 6vw , 2.5rem);
+    // margin-bottom: 1.6rem;
+}
+
+h4 {
+    font-size: clamp(1.4rem, 6vw , 1.6rem);
+    // margin-bottom: 1.6rem;
+}
+
+p {
+    font-family: "Ubuntu Condensed", arial, sans-serif;
+    font-size: clamp(1.4rem, 6vw , 1.6rem);
+    // margin-bottom: 1.3rem;
+    // text-wrap: balance;
+}
+
+.container {
+    max-width: 130rem;
+    padding: 0 1.6rem;
+    margin: 0 auto;
+}

@@ -1,0 +1,6 @@
+// 1. Variable - storing css properties such as color, font, margin, etc.
+// 2. Partials - main.scss is the parent scss while the child scss will be _filename.scss which will create a 1 css file. It must be in the main folder.
+// 3. Inheritance - 
+
+@use './page' as *;
+

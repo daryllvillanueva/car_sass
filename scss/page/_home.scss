@@ -1,0 +1,201 @@
+@use '../abstract' as *;
+@use '../base' as *;
+@use '../component' as *;
+@use '../layout' as *;
+@use '../vendor' as *;
+
+
+.banner {
+    &_wrapper {
+        img {
+            @include imgCover(100%, 100%);
+        }
+        .caption {
+            position: relative;
+            .slider_txt {
+                @include mediaQuery {
+                    top: 8rem;
+                    right: 3rem;
+                }
+                text-align: left;
+                color: $clr-light;
+                position: absolute;
+                font-size: clamp(1.5rem, 5vw, 5rem);
+                font-weight: 500;
+                right: 16rem;
+                top: 19.5rem;
+                line-height: 1;
+            }
+
+        }
+    }
+}
+
+
+.features {
+    &_wrapper {
+        @include grid(4, 2rem);
+        @include mediaQuery {
+            @include grid(2);
+            gap: 0;
+            grid-row-gap: 3rem;
+        }
+    }
+    &_list {
+        text-align: center;
+        display: block;
+        h3 {
+            font-size: clamp(1rem, 7vw, 2rem);
+            font-weight: 500;
+            padding-bottom: 3rem;
+            border-bottom: 4px solid #3e3e43;
+        }
+        i {
+            font-size: clamp(2rem, 7vw, 4rem);
+            margin-top: 4rem;
+        }
+        p {
+            margin-top: 4rem;
+            font-size: clamp(.5rem, 7vw, 1.35rem);
+            font-weight: 400;
+            line-height: 2.4rem;
+        }
+        .more_btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: $clr-primary;
+            border-radius: .5rem;
+            margin-top: 4rem;
+            font-size: 1.7rem;
+        }
+    }
+}
+
+.services {
+    &_wrapper {
+        .tns-outer {
+            position: relative;
+        }
+        .tns-controls {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateY(-320%);
+            display: flex;
+            gap: 2rem;
+        }
+        h2 {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1.5px solid #fa858a;
+            font-size: clamp(2rem, 5vw, 4rem);
+        }  
+    }
+    &_list {
+        img {
+            @include imgCover(auto, 100%);
+        }
+        p {
+            margin-top: 2rem;
+            font-size: clamp(.5rem, 5vw, 1.4rem);
+            line-height: 1.7;
+        }
+    }
+}
+
+.task {
+    &_wrapper {
+        background-color: #fcf9f1;
+        @include grid(2, 1.7rem);
+    }
+    &_list {
+        h2 {
+            padding-bottom: 1rem;
+            border-bottom: 1.5px solid #d9d9db;
+            font-weight: 400;
+            opacity: 0.8;
+            font-size: clamp(2rem, 5vw, 4rem);
+        }
+        p {
+            font-size: clamp(.5rem, 5vw, 1.8rem);
+            margin-top: 3rem;
+            opacity: 0.9;
+        }
+
+        p:nth-child(2) {
+            padding-bottom: 2rem;
+            border-bottom: 1.5px solid #d9d9db;
+        }
+    }
+    &_list:nth-child(2) {
+        p:nth-child(4) {
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1.5px solid #d9d9db;
+            font-size: clamp(.5rem, 5vw, 1.5rem);
+            line-height: 1.5;
+        }
+        p:nth-child(6) {
+            margin-top: 1.3rem;
+        }
+    }
+}
+
+.cta {
+    &_wrapper {
+        p {
+            font-size: clamp(6rem, 6vw, 11rem);
+            font-weight: 500;
+        }
+        .more_btn {
+            display: inline-block;
+            padding: 2rem 3rem;
+            background: $clr-primary;
+            border-radius: .3rem;
+            margin-top: 2.5rem;
+            font-size: 2rem;
+            margin-right: 1.5rem;
+        }
+        i {
+            margin-top: 2rem;
+            font-size: 4rem;
+        }
+    }
+}
+
+.footer {
+    &_wrapper {
+        @include unevenGrid(1fr 1fr 2fr, 2rem);
+        @include mediaQuery {
+            @include unevenGrid(1fr, 2rem);
+        }
+        .contact_list {
+            @include mediaQuery {
+                margin-left: 0;
+                justify-self: center;
+            }
+            p {
+                margin-left: 2rem;
+                margin-top: 3rem;
+                opacity: 0.4;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+            i {
+                margin-left: 1.5rem;
+                font-size: 2.5rem
+            }
+        }
+        
+        .map {
+            iframe {
+                @include mediaQuery {
+                    justify-self: center;
+                }
+                @include imgCover(28rem, 100%);
+            }
+        }
+    }
+}
