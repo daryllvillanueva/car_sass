@@ -612,7 +612,7 @@ p {
   position: absolute;
   font-size: clamp(1.5rem, 5vw, 5rem);
   font-weight: 500;
-  right: 16rem;
+  right: 15rem;
   top: 19.5rem;
   line-height: 1;
 }
